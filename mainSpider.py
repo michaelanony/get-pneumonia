@@ -34,17 +34,16 @@ class PneumoniaSpider:
 
     def start(self):
 
-        # self.programme_flag = str(self.rc.get("isRunProgramme"), encoding='utf-8')
-        # spider_flag = str(self.rc.get("isRunSpider"), encoding='utf-8')
-        # url = str(self.rc.get("captcha_url"), encoding='utf-8')
-        # print("Now programme_flag is {},spider_flag is {}, url is {}".format(self.programme_flag, spider_flag, url))
+        self.programme_flag = str(self.rc.get("isRunProgramme"), encoding='utf-8')
+        spider_flag = str(self.rc.get("isRunSpider"), encoding='utf-8')
+        url = str(self.rc.get("captcha_url"), encoding='utf-8')
+        print("Now programme_flag is {},spider_flag is {}, url is {}".format(self.programme_flag, spider_flag, url))
         print("Init success!")
-        # while spider_flag:
-        url="https://i.snssdk.com/forum/home/v1/info/?forum_id=1656388947394568&is_web_refresh=1&version_code=7.5.7&tma_jssdk_version=1.48.1.3&app_name=news_article&vid=40A214FE-B6C0-4F90-8F8F-1C74E19D194D&device_id=69837115173&channel=App%20Store&resolution=1242*2208&aid=13&ab_version=1407069%2C668774%2C1445077%2C765194%2C857803%2C660830%2C1397711%2C1243993%2C1434504%2C1379676%2C662176%2C871258%2C801968%2C1419036%2C668775%2C1190522%2C1157750%2C1419598%2C1439624%2C1422304%2C1428575%2C668779%2C1251923%2C662099&ab_feature=794527&ab_group=794527&update_version_code=75732&openudid=a5714f6dd43fb2d12164a45e0d9e2a17cf06c58d&pos=5pe9vb%2Fx8v788cLx%2FOn47unC7fLuv72nveaXvb29vb%2F%2B8vLv%2BfTz%2FOn4y%2Fzx6Pjuv72nveaXvb29vb29v%2FHy8%2Fr06ej5%2BL%2B9p72tsZe9vb29vb2%2F8fzp9Ono%2Bfi%2Fvae9rZe9vb294Je9veCX4A%3D%3D&cdid=C02CF67F-DD43-4674-8ADA-0DFDE1D57C62&idfv=40A214FE-B6C0-4F90-8F8F-1C74E19D194D&ac=WIFI&os_version=13.3.1&ssmix=a&device_platform=iphone&iid=100818313012&ab_client=a1%2Cf2%2Cf7%2Ce1&device_type=iPhone%208%20Plus&idfa=4ED1E244-C3BE-469D-9584-020F5E4EB231&is_preview=0"
-        self.run_spider(url)
-        print("This is " + str(self.iota) + " run success!")
-        self.iota += 1
-            # time.sleep(5)
+        while spider_flag:
+            self.run_spider(url)
+            print("This is " + str(self.iota) + " run success!")
+            self.iota += 1
+            time.sleep(10)
 
     def run_spider(self, url):
         print("=========Now get data============")
@@ -99,11 +98,13 @@ class PneumoniaSpider:
                 try:
                     table_name = city_py_map[data['city_name']]
                     sql_str = "INSERT INTO pneumonia_record.{}(city_name,confirm_num,death_num,cure_num) values('{}',{},{},{})".format(
-                        table_name,data['city_name'], data['data']['confirm_num'], data['data']['death_num'], data['data']['cure_num'])
+                        table_name, data['city_name'], data['data']['confirm_num'], data['data']['death_num'],
+                        data['data']['cure_num'])
                     print(sql_str)
                     cursor.execute(sql_str)
                     sql_str2 = "UPDATE pneumonia_record.all_city_new SET confirm_num={},death_num={},cure_num={} WHERE city_name='{}'".format(
-                       data['data']['confirm_num'], data['data']['death_num'], data['data']['cure_num'],data['city_name'])
+                        data['data']['confirm_num'], data['data']['death_num'], data['data']['cure_num'],
+                        data['city_name'])
                     cursor.execute(sql_str2)
                 except Exception as e:
                     print("db_insert_handle err is ", e)
