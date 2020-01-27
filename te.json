@@ -1,0 +1,94 @@
+{
+	"err_no": 0,
+	"err_tips": "",
+	"forum": {
+		"status": 1,
+		"banner_url": "http://p99.pstatp.com/origin/web-union/76621e37-8bc9-4d59-99aa-65700d97c977",
+		"forum_name": "新型冠状病毒肺炎实时追踪",
+		"forum_id": 1656388947394568,
+		"avatar_url": "",
+		"schema": "sslocal://forum_topic?concern_id=1656388947394568\u0026forum_id=1656388947394568",
+		"desc": "全国：确诊2823例 死亡81例 治愈55例\n其中，港澳台确诊19例",
+		"desc_rich_span": "",
+		"rich_content": "全国：确诊2823例 死亡81例 治愈55例\n其中，港澳台确诊19例",
+		"sub_desc": "10亿阅读",
+		"product_type": 1,
+		"concern_id": 1656388947394568,
+		"extra": {
+			"music_id": 0,
+			"theme_id": "",
+			"effect_id": 0,
+			"data": "",
+			"ncov_image_url": "http://p3.pstatp.com/large/web-union/4ebf7ec3-fd94-4593-aae8-4ea6edd1c338",
+			"ncov_string_list": "[\"湖北 确诊1423例 死亡76例 治愈44例\",\"广东 确诊146例 治愈2例\",\"河南 确诊128例 死亡1例\",\"浙江 确诊128例 治愈1例\",\"重庆 确诊110例\",\"湖南 确诊100例\",\"山东 确诊75例\",\"北京 确诊72例 治愈2例\",\"安徽 确诊70例\",\"四川 确诊69例\",\"福建 确诊56例\",\"上海 确诊53例 死亡1例 治愈3例\",\"江西 确诊48例 治愈2例\",\"江苏 确诊47例 治愈1例\",\"广西 确诊46例\",\"陕西 确诊35例\",\"海南 确诊31例 死亡1例\",\"辽宁 确诊24例\",\"黑龙江 确诊21例 死亡1例\",\"云南 确诊19例\",\"河北 确诊18例 死亡1例\",\"天津 确诊18例\",\"甘肃 确诊14例\",\"山西 确诊13例\",\"内蒙古 确诊11例\",\"香港 确诊8例\",\"贵州 确诊7例\",\"宁夏 确诊7例\",\"吉林 确诊6例\",\"澳门 确诊6例\",\"新疆 确诊5例\",\"台湾 确诊5例\",\"青海 确诊4例\"]"
+		},
+		"category_type": 0,
+		"header_style": 100,
+		"show_follow_button": true,
+		"is_following": false,
+		"modify_time": 1580115781
+	},
+	"tabs": [{
+		"need_common_params": 1,
+		"name": "专题",
+		"url": "/api/feed/forum_flow/v1/",
+		"tab_type": 0,
+		"tab_id": 1656388947394584,
+		"refresh_interval": 60,
+		"category_name": "forum_flow_subject",
+		"tab_et_status": 1,
+		"sole_name": "",
+		"ban_refresh": 0
+	}],
+	"share_info": {
+		"share_cover": "",
+		"share_title": "新型冠状病毒肺炎实时追踪",
+		"share_url": "https://weitoutiao.zjurl.cn/web/ugc/forum/1656388947394568",
+		"share_desc": "头条专题: 「新型冠状病毒肺炎实时追踪」",
+		"token_type": 3,
+		"share_type": {
+			"pyq": 0,
+			"qq": 0,
+			"qzone": 0,
+			"wx": 0
+		}
+	},
+	"publisher_control": {
+		"show_et_status": 12,
+		"post_content_hint": "分享「新型冠状病毒肺炎实时追踪」的新鲜事",
+		"publisher_types": [{
+			"type": 4,
+			"name": "发微头条",
+			"schema": "",
+			"icon": "",
+			"label": "post_topic"
+		}, {
+			"type": 5,
+			"name": "拍小视频",
+			"schema": "",
+			"icon": "",
+			"label": "shortvideo_shoot"
+		}, {
+			"type": 12,
+			"name": "写文章",
+			"schema": "sslocal://pgc_write_editor?from=forum_topic\u0026activity_trans_type=3",
+			"icon": "http://p3-tt.bytecdn.cn/origin/1e0710006d42bbd110f14",
+			"label": "pgc_article"
+		}]
+	},
+	"repost_params": {
+		"repost_type": 224,
+		"fw_id": 1656388947394568,
+		"fw_id_type": 42,
+		"fw_user_id": 0,
+		"opt_id": 1656388947394568,
+		"opt_id_type": 42,
+		"schema": "sslocal://forum_topic?concern_id=1656388947394568\u0026forum_id=1656388947394568",
+		"title": "新型冠状病毒肺炎实时追踪",
+		"cover_url": "http://p99.pstatp.com/origin/web-union/76621e37-8bc9-4d59-99aa-65700d97c977"
+	},
+	"insert_control": [{
+		"type": 2,
+		"category_name": ["forum_topic_thread", "forum_hot_tab"]
+	}]
+}
