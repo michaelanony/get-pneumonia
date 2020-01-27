@@ -4,7 +4,6 @@ import pymysql
 import redis
 import time
 import re
-from threading import Thread
 
 city_py_map = {'湖北': 'hu_bei', '广东': 'guang_dong', '河南': 'he_nan', '浙江': 'zhe_jiang', '重庆': 'chong_qin', '湖南': 'hu_nan',
                '山东': 'shan_dong', '北京': 'bei_jing', '安徽': 'an_hui', '四川': 'si_chuan', '福建': 'fu_jian', '江西': 'jiang_xi',
